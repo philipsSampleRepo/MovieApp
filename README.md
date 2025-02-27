@@ -5,6 +5,10 @@ For this application I have used the following tech stack
 * Kotlin flows
 * OKHTTP
 * Retrofit
+* GSON
+* Android Nav component
 * Dagger 2
 * Glide
+* RecyclerView
+* Fragments
 * And MVVM with clean architechture
