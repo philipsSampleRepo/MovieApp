@@ -1,0 +1,20 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.movies.msearch.ui.splash.fragments.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            android:id="@+id/action_splash_to_movies_list"
+            app:destination="@id/movieListFragment" />
+        />
+    </fragment>
+
+    <fragment
+        android:id="@+id/movieListFragment"
+        android:name="com.movies.msearch.ui.home.fragments.MovieListFragment"
+        android:label="MovieWatch" />
+</navigation>

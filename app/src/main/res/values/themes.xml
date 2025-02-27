@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MovieSearch" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/dark_blue</item>
+        <!-- Status bar color -->
+        <item name="colorPrimaryDark">@color/dark_blue</item>
+        <!-- Accent color -->
+        <item name="colorAccent">@color/dark_blue</item>
+    </style>
+
+    <style name="Theme.MovieSearch" parent="Base.Theme.MovieSearch" >
+        <item name="android:navigationBarColor">@color/dark_blue</item>
+    </style>
+
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/dark_blue</item>
+        <item name="android:navigationBarColor">@color/dark_blue</item>
+        <item name="colorPrimary">@color/dark_blue</item>
+        <!-- Status bar color -->
+        <item name="colorPrimaryDark">@color/dark_blue</item>
+        <!-- Accent color -->
+        <item name="colorAccent">@color/dark_blue</item>
+    </style>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MovieSearch</string>
+    <string name="enter_movie_name">Enter a movie</string>
+    <string name="search">Search</string>
+    <string name="no_movies_to_show_msg">Please search for movies…</string>
+    <string name="loading_msg">Loading…</string>
+    <string name="empty_list">There are no movies to show. Please try again with a different name.</string>
+    <string name="enter_search_text">Please enter a movie name to search.</string>
+</resources>

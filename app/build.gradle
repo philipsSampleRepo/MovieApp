@@ -1,0 +1,96 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
+}
+
+android {
+    namespace 'com.movies.msearch'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.movies.msearch"
+        minSdk 22
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        flavorDimensions.add("environment")
+        productFlavors {
+            dev {
+                dimension "environment"
+                buildConfigField "String", "API_KEY", "\"8d6aa4ca\""
+                buildConfigField "String", "BASE_URL", "\"https://www.omdbapi.com/\""
+            }
+            prod {
+                dimension "environment"
+                buildConfigField "String", "API_KEY", "\"prod_api_key\""
+                buildConfigField "String", "BASE_URL", "\"https://api.produrl.com/\""
+            }
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    // AndroidX
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.fragment.ktx
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+    implementation libs.androidx.lifecycle.livedata.ktx
+    implementation libs.androidx.navigation.fragment.ktx
+    implementation libs.androidx.navigation.ui.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.core.splashscreen
+    implementation libs.androidx.cardview
+
+    //material design
+    implementation libs.material
+
+    // Retrofit & OkHttp
+    implementation libs.retrofit
+    implementation libs.converter.gson
+    implementation libs.okhttp
+    implementation libs.logging.interceptor
+
+    // Kotlin Coroutines
+    implementation libs.kotlinx.coroutines.core
+    implementation libs.kotlinx.coroutines.android
+
+    // Dagger 2
+    implementation libs.dagger
+    implementation libs.androidx.recyclerview
+    kapt libs.dagger.compiler
+
+    // Glide for image loading
+    implementation libs.glide
+    kapt libs.compiler
+
+    //test
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+}

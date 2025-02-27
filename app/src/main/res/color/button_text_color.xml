@@ -1,0 +1,5 @@
+<!-- res/color/button_text_color.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:color="@color/dark_blue" />
+    <item android:color="@color/white" />
+</selector>
