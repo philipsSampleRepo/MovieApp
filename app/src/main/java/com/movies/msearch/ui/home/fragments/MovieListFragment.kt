@@ -150,6 +150,7 @@ class MovieListFragment : Fragment() {
                     imeOptions = if (hasInput) {
                         EditorInfo.IME_ACTION_SEARCH
                     } else {
+                        binding.statusUpdateView.text = getString(R.string.no_movies_to_show_msg)
                         EditorInfo.IME_ACTION_NONE
                     }
                     setInputType(inputType)
